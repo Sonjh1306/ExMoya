@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B8E122BE8F6BAB7A34D1FCE /* Pods_ExMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0453BC5CEE3F073E837BA5F /* Pods_ExMoya.framework */; };
+		BD7359BD2980C9010006174D /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7359BC2980C9010006174D /* JokeViewModel.swift */; };
+		BD7359EB2980D5E80006174D /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7359EA2980D5E80006174D /* JokeView.swift */; };
+		BDD334C3295941FB003B357E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334C2295941FB003B357E /* AppDelegate.swift */; };
+		BDD334C5295941FB003B357E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334C4295941FB003B357E /* SceneDelegate.swift */; };
+		BDD334C7295941FB003B357E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334C6295941FB003B357E /* ViewController.swift */; };
+		BDD334CA295941FB003B357E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD334C8295941FB003B357E /* Main.storyboard */; };
+		BDD334CC295941FD003B357E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD334CB295941FD003B357E /* Assets.xcassets */; };
+		BDD334CF295941FD003B357E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD334CD295941FD003B357E /* LaunchScreen.storyboard */; };
+		BDD334D72959461E003B357E /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334D62959461E003B357E /* Joke.swift */; };
+		BDD334D9295961A3003B357E /* JokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334D8295961A3003B357E /* JokeAPI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01C44E5A60CF85A9F66175DB /* Pods-ExMoya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExMoya.release.xcconfig"; path = "Target Support Files/Pods-ExMoya/Pods-ExMoya.release.xcconfig"; sourceTree = "<group>"; };
+		9072D257F8045D47FF2FBBA5 /* Pods-ExMoya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExMoya.debug.xcconfig"; path = "Target Support Files/Pods-ExMoya/Pods-ExMoya.debug.xcconfig"; sourceTree = "<group>"; };
+		BD7359BC2980C9010006174D /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
+		BD7359EA2980D5E80006174D /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
+		BDD334BF295941FB003B357E /* ExMoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExMoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD334C2295941FB003B357E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDD334C4295941FB003B357E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BDD334C6295941FB003B357E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDD334C9295941FB003B357E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDD334CB295941FD003B357E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDD334CE295941FD003B357E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDD334D0295941FD003B357E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD334D62959461E003B357E /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		BDD334D8295961A3003B357E /* JokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAPI.swift; sourceTree = "<group>"; };
+		D0453BC5CEE3F073E837BA5F /* Pods_ExMoya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExMoya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDD334BC295941FB003B357E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B8E122BE8F6BAB7A34D1FCE /* Pods_ExMoya.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		640C4EB86F8BEE022D91AB27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0453BC5CEE3F073E837BA5F /* Pods_ExMoya.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8ACCCA93B7B20677FB7F7E86 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9072D257F8045D47FF2FBBA5 /* Pods-ExMoya.debug.xcconfig */,
+				01C44E5A60CF85A9F66175DB /* Pods-ExMoya.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BD0EEF7F29641579008BA008 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD7359EA2980D5E80006174D /* JokeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD0EEF80296415AE008BA008 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD7359BC2980C9010006174D /* JokeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BD7359EC298104E80006174D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDD334C6295941FB003B357E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD7359ED298105300006174D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BDD334D8295961A3003B357E /* JokeAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BDD334B6295941FB003B357E = {
+			isa = PBXGroup;
+			children = (
+				BDD334C1295941FB003B357E /* ExMoya */,
+				BDD334C0295941FB003B357E /* Products */,
+				8ACCCA93B7B20677FB7F7E86 /* Pods */,
+				640C4EB86F8BEE022D91AB27 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BDD334C0295941FB003B357E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDD334BF295941FB003B357E /* ExMoya.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDD334C1295941FB003B357E /* ExMoya */ = {
+			isa = PBXGroup;
+			children = (
+				BD7359ED298105300006174D /* Network */,
+				BD7359EC298104E80006174D /* Controller */,
+				BD0EEF7F29641579008BA008 /* View */,
+				BD0EEF80296415AE008BA008 /* ViewModel */,
+				BDE70AFA295A782E00ECC177 /* Model */,
+				BDD334C2295941FB003B357E /* AppDelegate.swift */,
+				BDD334C4295941FB003B357E /* SceneDelegate.swift */,
+				BDD334C8295941FB003B357E /* Main.storyboard */,
+				BDD334CB295941FD003B357E /* Assets.xcassets */,
+				BDD334CD295941FD003B357E /* LaunchScreen.storyboard */,
+				BDD334D0295941FD003B357E /* Info.plist */,
+			);
+			path = ExMoya;
+			sourceTree = "<group>";
+		};
+		BDE70AFA295A782E00ECC177 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDD334D62959461E003B357E /* Joke.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDD334BE295941FB003B357E /* ExMoya */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDD334D3295941FD003B357E /* Build configuration list for PBXNativeTarget "ExMoya" */;
+			buildPhases = (
+				887A34F905122A179A18587A /* [CP] Check Pods Manifest.lock */,
+				BDD334BB295941FB003B357E /* Sources */,
+				BDD334BC295941FB003B357E /* Frameworks */,
+				BDD334BD295941FB003B357E /* Resources */,
+				FD9C8F4348D58E055E5E60FA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExMoya;
+			productName = ExMoya;
+			productReference = BDD334BF295941FB003B357E /* ExMoya.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDD334B7295941FB003B357E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					BDD334BE295941FB003B357E = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = BDD334BA295941FB003B357E /* Build configuration list for PBXProject "ExMoya" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDD334B6295941FB003B357E;
+			productRefGroup = BDD334C0295941FB003B357E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDD334BE295941FB003B357E /* ExMoya */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDD334BD295941FB003B357E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD334CF295941FD003B357E /* LaunchScreen.storyboard in Resources */,
+				BDD334CC295941FD003B357E /* Assets.xcassets in Resources */,
+				BDD334CA295941FB003B357E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		887A34F905122A179A18587A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExMoya-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD9C8F4348D58E055E5E60FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExMoya/Pods-ExMoya-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExMoya/Pods-ExMoya-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExMoya/Pods-ExMoya-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDD334BB295941FB003B357E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD7359BD2980C9010006174D /* JokeViewModel.swift in Sources */,
+				BDD334D72959461E003B357E /* Joke.swift in Sources */,
+				BDD334C7295941FB003B357E /* ViewController.swift in Sources */,
+				BDD334C3295941FB003B357E /* AppDelegate.swift in Sources */,
+				BD7359EB2980D5E80006174D /* JokeView.swift in Sources */,
+				BDD334C5295941FB003B357E /* SceneDelegate.swift in Sources */,
+				BDD334D9295961A3003B357E /* JokeAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BDD334C8295941FB003B357E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDD334C9295941FB003B357E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDD334CD295941FD003B357E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDD334CE295941FD003B357E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDD334D1295941FD003B357E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDD334D2295941FD003B357E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDD334D4295941FD003B357E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9072D257F8045D47FF2FBBA5 /* Pods-ExMoya.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99XDN4TU2D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExMoya/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exmoya.danal.ExMoya;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDD334D5295941FD003B357E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C44E5A60CF85A9F66175DB /* Pods-ExMoya.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99XDN4TU2D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExMoya/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exmoya.danal.ExMoya;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDD334BA295941FB003B357E /* Build configuration list for PBXProject "ExMoya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD334D1295941FD003B357E /* Debug */,
+				BDD334D2295941FD003B357E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDD334D3295941FD003B357E /* Build configuration list for PBXNativeTarget "ExMoya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD334D4295941FD003B357E /* Debug */,
+				BDD334D5295941FD003B357E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDD334B7295941FB003B357E /* Project object */;
+}
