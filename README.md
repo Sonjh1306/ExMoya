@@ -1,5 +1,5 @@
 # ExMoya
-- HTTP 통신을 더욱 편하게 해주는 라이브러리
+- 일반적으로 열거형을 사용하여 타입이 안전한 방식으로 네트워크 요청을 캡슐화한 네트워크 계층에서 작업할때 자신감을 제공한다는 개념에서 영감을 얻은 네트워킹 라이브러리
 - URLSession → Alamofire → Moya ( 진행방향: 추상화 UP, 편리함 & 코드 간결 UP)
 
 ### Moya TargetType Properties
