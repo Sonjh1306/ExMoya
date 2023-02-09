@@ -10,6 +10,12 @@
 		9B8E122BE8F6BAB7A34D1FCE /* Pods_ExMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0453BC5CEE3F073E837BA5F /* Pods_ExMoya.framework */; };
 		BD7359BD2980C9010006174D /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7359BC2980C9010006174D /* JokeViewModel.swift */; };
 		BD7359EB2980D5E80006174D /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7359EA2980D5E80006174D /* JokeView.swift */; };
+		BD90CEEC2994CF530048E1E6 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEEB2994CF530048E1E6 /* NetworkLoggerPlugin.swift */; };
+		BD90CEEE2994CF870048E1E6 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEED2994CF870048E1E6 /* Networkable.swift */; };
+		BD90CEF02994D0100048E1E6 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEEF2994D0100048E1E6 /* ServiceError.swift */; };
+		BD90CEF22994D0620048E1E6 /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEF12994D0620048E1E6 /* ResponseData.swift */; };
+		BD90CEF42994D0CF0048E1E6 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEF32994D0CF0048E1E6 /* BaseTargetType.swift */; };
+		BD90CEF62994D3910048E1E6 /* JokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEF52994D3910048E1E6 /* JokeAPI.swift */; };
 		BDD334C3295941FB003B357E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334C2295941FB003B357E /* AppDelegate.swift */; };
 		BDD334C5295941FB003B357E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334C4295941FB003B357E /* SceneDelegate.swift */; };
 		BDD334C7295941FB003B357E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334C6295941FB003B357E /* ViewController.swift */; };
@@ -17,7 +23,7 @@
 		BDD334CC295941FD003B357E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD334CB295941FD003B357E /* Assets.xcassets */; };
 		BDD334CF295941FD003B357E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD334CD295941FD003B357E /* LaunchScreen.storyboard */; };
 		BDD334D72959461E003B357E /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334D62959461E003B357E /* Joke.swift */; };
-		BDD334D9295961A3003B357E /* JokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334D8295961A3003B357E /* JokeAPI.swift */; };
+		BDD334D9295961A3003B357E /* JokeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334D8295961A3003B357E /* JokeTarget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		9072D257F8045D47FF2FBBA5 /* Pods-ExMoya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExMoya.debug.xcconfig"; path = "Target Support Files/Pods-ExMoya/Pods-ExMoya.debug.xcconfig"; sourceTree = "<group>"; };
 		BD7359BC2980C9010006174D /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
 		BD7359EA2980D5E80006174D /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
+		BD90CEEB2994CF530048E1E6 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		BD90CEED2994CF870048E1E6 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		BD90CEEF2994D0100048E1E6 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		BD90CEF12994D0620048E1E6 /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
+		BD90CEF32994D0CF0048E1E6 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		BD90CEF52994D3910048E1E6 /* JokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAPI.swift; sourceTree = "<group>"; };
 		BDD334BF295941FB003B357E /* ExMoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExMoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD334C2295941FB003B357E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD334C4295941FB003B357E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +46,7 @@
 		BDD334CE295941FD003B357E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD334D0295941FD003B357E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDD334D62959461E003B357E /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
-		BDD334D8295961A3003B357E /* JokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAPI.swift; sourceTree = "<group>"; };
+		BDD334D8295961A3003B357E /* JokeTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTarget.swift; sourceTree = "<group>"; };
 		D0453BC5CEE3F073E837BA5F /* Pods_ExMoya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExMoya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,7 +106,13 @@
 		BD7359ED298105300006174D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BDD334D8295961A3003B357E /* JokeAPI.swift */,
+				BDD334D8295961A3003B357E /* JokeTarget.swift */,
+				BD90CEEB2994CF530048E1E6 /* NetworkLoggerPlugin.swift */,
+				BD90CEED2994CF870048E1E6 /* Networkable.swift */,
+				BD90CEEF2994D0100048E1E6 /* ServiceError.swift */,
+				BD90CEF12994D0620048E1E6 /* ResponseData.swift */,
+				BD90CEF32994D0CF0048E1E6 /* BaseTargetType.swift */,
+				BD90CEF52994D3910048E1E6 /* JokeAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -258,13 +276,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD90CEF02994D0100048E1E6 /* ServiceError.swift in Sources */,
 				BD7359BD2980C9010006174D /* JokeViewModel.swift in Sources */,
+				BD90CEEE2994CF870048E1E6 /* Networkable.swift in Sources */,
 				BDD334D72959461E003B357E /* Joke.swift in Sources */,
+				BD90CEF22994D0620048E1E6 /* ResponseData.swift in Sources */,
 				BDD334C7295941FB003B357E /* ViewController.swift in Sources */,
 				BDD334C3295941FB003B357E /* AppDelegate.swift in Sources */,
 				BD7359EB2980D5E80006174D /* JokeView.swift in Sources */,
+				BD90CEEC2994CF530048E1E6 /* NetworkLoggerPlugin.swift in Sources */,
 				BDD334C5295941FB003B357E /* SceneDelegate.swift in Sources */,
-				BDD334D9295961A3003B357E /* JokeAPI.swift in Sources */,
+				BD90CEF62994D3910048E1E6 /* JokeAPI.swift in Sources */,
+				BDD334D9295961A3003B357E /* JokeTarget.swift in Sources */,
+				BD90CEF42994D0CF0048E1E6 /* BaseTargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

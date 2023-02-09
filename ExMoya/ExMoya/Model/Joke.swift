@@ -1,6 +1,6 @@
 import Foundation
 
-struct Joke: Decodable {
+struct Joke: Codable {
     let iconURL: String
     let id, updatedAt: String
     let url: String

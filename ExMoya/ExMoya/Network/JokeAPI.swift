@@ -1,42 +1,23 @@
-import Foundation
+//
+//  JokeAPI.swift
+//  ExMoya
+//
+//  Created by sonjuhyeong on 2023/02/09.
+//
+
 import Moya
 
-enum JokeAPI {
-    case getJoke
-}
-
-extension JokeAPI: TargetType {
-    var baseURL: URL {
-        switch self {
-        case .getJoke: return URL(string: "https://api.chucknorris.io")!
-        }
-    }
+struct JokeAPI: Networkable {
     
-    var path: String {
-        switch self {
-        case .getJoke: return "/jokes/random"
-        }
-    }
+    typealias Target = JokeTarget
     
-    var method: Moya.Method {
-        switch self {
-        case .getJoke: return .get
+    /// page에 해당하는 User 정보 조회
+    static func getUserList(completion: @escaping (_ succeed: Joke?, _ failed: Error?) -> Void) {
+        makeProvider().request(.getJoke) { result in
+            switch ResponseData<Joke>.processJSONResponse(result) {
+            case .success(let model): return completion(model, nil)
+            case .failure(let error): return completion(nil, error)
+            }
         }
-    }
-    
-    var task: Moya.Task {
-        switch self {
-        case .getJoke: return .requestPlain
-        }
-    }
-    
-    var headers: [String : String]? {
-        switch self {
-        case .getJoke: return ["Content-Type": "application/json"]
-        }
-    }
-    
-    var validationType: ValidationType {
-        return .successCodes
     }
 }

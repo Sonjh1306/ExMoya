@@ -33,7 +33,6 @@ final class JokeViewModel: ViewModelProtocol {
     var input: Input = Input()
     var output: Output = Output()
     
-    let provider: MoyaProvider<JokeAPI> = MoyaProvider<JokeAPI>()
     var disposeBag: DisposeBag = DisposeBag()
     
     init() {
@@ -58,22 +57,18 @@ final class JokeViewModel: ViewModelProtocol {
     func fetchJokeData() -> Observable<Joke> {
         return Observable.create { [weak self] (observer) in
             self?.output.loadgingState.accept(true)
-            self?.provider.request(.getJoke, completion: { result in
-                switch result {
-                case .success(let response):
-                    do {
-                        let result = try response.map(Joke.self)
-                        observer.onNext(result)
-                    } catch (let error) {
-                        print(error.localizedDescription)
-                        observer.onError(NetworkError.decodingError)
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    observer.onError(NetworkError.networkError)
+            
+            JokeAPI.getUserList { response, error in
+                if let error = error {
+                    observer.onError(error)
+                    return
                 }
+                
+                guard let response = response else { return }
+                observer.onNext(response)
+                observer.onCompleted()
                 self?.output.loadgingState.accept(false)
-            })
+            }
             return Disposables.create()
         }
         
