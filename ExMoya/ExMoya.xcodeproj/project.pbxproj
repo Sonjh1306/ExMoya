@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9B8E122BE8F6BAB7A34D1FCE /* Pods_ExMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0453BC5CEE3F073E837BA5F /* Pods_ExMoya.framework */; };
+		BD2C7ED029B06ED900A0BA2E /* NetworkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2C7ECF29B06ED900A0BA2E /* NetworkWrapper.swift */; };
+		BD2C7ED729B070A900A0BA2E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2C7ED129B06F5E00A0BA2E /* NetworkError.swift */; };
 		BD7359BD2980C9010006174D /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7359BC2980C9010006174D /* JokeViewModel.swift */; };
 		BD7359EB2980D5E80006174D /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7359EA2980D5E80006174D /* JokeView.swift */; };
 		BD90CEEC2994CF530048E1E6 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEEB2994CF530048E1E6 /* NetworkLoggerPlugin.swift */; };
-		BD90CEEE2994CF870048E1E6 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEED2994CF870048E1E6 /* Networkable.swift */; };
-		BD90CEF02994D0100048E1E6 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEEF2994D0100048E1E6 /* ServiceError.swift */; };
-		BD90CEF22994D0620048E1E6 /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEF12994D0620048E1E6 /* ResponseData.swift */; };
 		BD90CEF42994D0CF0048E1E6 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEF32994D0CF0048E1E6 /* BaseTargetType.swift */; };
 		BD90CEF62994D3910048E1E6 /* JokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90CEF52994D3910048E1E6 /* JokeAPI.swift */; };
 		BDD334C3295941FB003B357E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD334C2295941FB003B357E /* AppDelegate.swift */; };
@@ -29,12 +28,11 @@
 /* Begin PBXFileReference section */
 		01C44E5A60CF85A9F66175DB /* Pods-ExMoya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExMoya.release.xcconfig"; path = "Target Support Files/Pods-ExMoya/Pods-ExMoya.release.xcconfig"; sourceTree = "<group>"; };
 		9072D257F8045D47FF2FBBA5 /* Pods-ExMoya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExMoya.debug.xcconfig"; path = "Target Support Files/Pods-ExMoya/Pods-ExMoya.debug.xcconfig"; sourceTree = "<group>"; };
+		BD2C7ECF29B06ED900A0BA2E /* NetworkWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWrapper.swift; sourceTree = "<group>"; };
+		BD2C7ED129B06F5E00A0BA2E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD7359BC2980C9010006174D /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
 		BD7359EA2980D5E80006174D /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
 		BD90CEEB2994CF530048E1E6 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
-		BD90CEED2994CF870048E1E6 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
-		BD90CEEF2994D0100048E1E6 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
-		BD90CEF12994D0620048E1E6 /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		BD90CEF32994D0CF0048E1E6 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		BD90CEF52994D3910048E1E6 /* JokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAPI.swift; sourceTree = "<group>"; };
 		BDD334BF295941FB003B357E /* ExMoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExMoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +93,39 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BD2C7ED329B06F8D00A0BA2E /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				BDD334D8295961A3003B357E /* JokeTarget.swift */,
+				BD90CEF32994D0CF0048E1E6 /* BaseTargetType.swift */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		BD2C7ED429B06F9700A0BA2E /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				BD90CEEB2994CF530048E1E6 /* NetworkLoggerPlugin.swift */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+		BD2C7ED529B06FA100A0BA2E /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				BD2C7ED129B06F5E00A0BA2E /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		BD2C7ED629B0707400A0BA2E /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				BD2C7ECF29B06ED900A0BA2E /* NetworkWrapper.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		BD7359EC298104E80006174D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,12 +137,10 @@
 		BD7359ED298105300006174D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BDD334D8295961A3003B357E /* JokeTarget.swift */,
-				BD90CEEB2994CF530048E1E6 /* NetworkLoggerPlugin.swift */,
-				BD90CEED2994CF870048E1E6 /* Networkable.swift */,
-				BD90CEEF2994D0100048E1E6 /* ServiceError.swift */,
-				BD90CEF12994D0620048E1E6 /* ResponseData.swift */,
-				BD90CEF32994D0CF0048E1E6 /* BaseTargetType.swift */,
+				BD2C7ED629B0707400A0BA2E /* Provider */,
+				BD2C7ED529B06FA100A0BA2E /* Error */,
+				BD2C7ED429B06F9700A0BA2E /* Plugin */,
+				BD2C7ED329B06F8D00A0BA2E /* Target */,
 				BD90CEF52994D3910048E1E6 /* JokeAPI.swift */,
 			);
 			path = Network;
@@ -276,17 +305,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD90CEF02994D0100048E1E6 /* ServiceError.swift in Sources */,
 				BD7359BD2980C9010006174D /* JokeViewModel.swift in Sources */,
-				BD90CEEE2994CF870048E1E6 /* Networkable.swift in Sources */,
+				BD2C7ED029B06ED900A0BA2E /* NetworkWrapper.swift in Sources */,
 				BDD334D72959461E003B357E /* Joke.swift in Sources */,
-				BD90CEF22994D0620048E1E6 /* ResponseData.swift in Sources */,
 				BDD334C7295941FB003B357E /* ViewController.swift in Sources */,
 				BDD334C3295941FB003B357E /* AppDelegate.swift in Sources */,
 				BD7359EB2980D5E80006174D /* JokeView.swift in Sources */,
 				BD90CEEC2994CF530048E1E6 /* NetworkLoggerPlugin.swift in Sources */,
 				BDD334C5295941FB003B357E /* SceneDelegate.swift in Sources */,
 				BD90CEF62994D3910048E1E6 /* JokeAPI.swift in Sources */,
+				BD2C7ED729B070A900A0BA2E /* NetworkError.swift in Sources */,
 				BDD334D9295961A3003B357E /* JokeTarget.swift in Sources */,
 				BD90CEF42994D0CF0048E1E6 /* BaseTargetType.swift in Sources */,
 			);

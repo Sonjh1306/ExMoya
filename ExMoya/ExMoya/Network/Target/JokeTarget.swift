@@ -6,9 +6,5 @@ enum JokeTarget {
 }
 
 extension JokeTarget: BaseTargetType {
-    
-    var validationType: ValidationType {
-        return .successCodes
-    }
-    
+
 }

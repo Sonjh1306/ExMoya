@@ -7,17 +7,19 @@
 
 import Moya
 
-struct JokeAPI: Networkable {
+struct JokeAPI {
     
-    typealias Target = JokeTarget
+    static let wrapper = NetworkWrapper<JokeTarget>(plugins: [NetworkLoggerPlugin()])
     
-    /// page에 해당하는 User 정보 조회
-    static func getUserList(completion: @escaping (_ succeed: Joke?, _ failed: Error?) -> Void) {
-        makeProvider().request(.getJoke) { result in
-            switch ResponseData<Joke>.processJSONResponse(result) {
-            case .success(let model): return completion(model, nil)
-            case .failure(let error): return completion(nil, error)
+    static func executeFetchJokeData(completion: @escaping (_ succeed: Joke?, _ failed: NetworkError?) -> Void) {
+        wrapper.sendRequest(provider: .getJoke, decodingType: Joke.self) { result in
+            switch result {
+            case .success(let response):
+                completion(response, nil)
+            case .failure(let error):
+                completion(nil, error)
             }
         }
     }
+    
 }

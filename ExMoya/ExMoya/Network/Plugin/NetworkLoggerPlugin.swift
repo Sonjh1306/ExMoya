@@ -8,10 +8,6 @@
 import Foundation
 import Moya
 
-/*
- provider를 이용하여 네트워크 호출
- plugin을 주입하게 되면 willSend, didReceive, onSucced, onFail에 대한 Log 확인 가능
- */
 struct NetworkLoggerPlugin: PluginType {
     
     func willSend(_ request: RequestType, target: TargetType) {

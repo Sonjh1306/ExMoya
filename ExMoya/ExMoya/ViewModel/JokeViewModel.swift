@@ -12,12 +12,6 @@ protocol ViewModelProtocol {
     var disposeBag: DisposeBag { get set }
 }
 
-enum NetworkError: Error {
-    case networkError
-    case decodingError
-    case urlError
-}
-
 final class JokeViewModel: ViewModelProtocol {
     
     struct Input {
@@ -40,12 +34,10 @@ final class JokeViewModel: ViewModelProtocol {
             .flatMap{ _ in self.fetchJokeData()}
             .catch({ (error) in
                 switch error as! NetworkError {
-                case .networkError:
-                    self.output.errorAlert.accept("Network Error")
-                case .decodingError:
-                    self.output.errorAlert.accept("Decoding Error")
-                case .urlError:
-                    self.output.errorAlert.accept("URL Error")
+                case .notConnection: self.output.errorAlert.accept("Not Connection")
+                case .noData: self.output.errorAlert.accept("No Data")
+                case .failDecode: self.output.errorAlert.accept("Fail Decode")
+                case .notValidateStatusCode: self.output.errorAlert.accept("Not Validate StatusCode")
                 }
                 return Observable.just(Joke(iconURL: "", id: "", updatedAt: "", url: "", value: ""))
             })
@@ -58,21 +50,18 @@ final class JokeViewModel: ViewModelProtocol {
         return Observable.create { [weak self] (observer) in
             self?.output.loadgingState.accept(true)
             
-            JokeAPI.getUserList { response, error in
-                if let error = error {
-                    observer.onError(error)
-                    return
+            JokeAPI.executeFetchJokeData { succeed, failed in
+                if failed != nil {
+                    observer.onError(failed!)
                 }
-                
-                guard let response = response else { return }
-                observer.onNext(response)
-                observer.onCompleted()
+                if let succeed = succeed {
+                    observer.onNext(succeed)
+                }
                 self?.output.loadgingState.accept(false)
+                observer.onCompleted()
             }
             return Disposables.create()
         }
         
     }
-    
-    
 }
